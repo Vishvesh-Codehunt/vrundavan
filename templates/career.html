@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Career</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/upper.js"></script>
+    <style>
+        .contact-container{
+            margin-top:10%;
+        }
+        .query-form{
+            background-color: #023b64;
+            color:white;
+            padding:50px 80px;
+        }
+        .query-h4{
+            font-size:20px;
+            margin-bottom:40px;
+        }
+        .addr-header{
+            margin-top:50px;
+            margin-bottom:30px;
+        }
+        .addr{
+            margin-bottom:30px;
+        }
+        .contact-hr{
+            background-color:white;
+            margin-bottom:30px;
+            margin-top:30px;
+        }
+        .join-header{
+            margin-top:50px;
+            margin-bottom:30px;
+        }
+        .join-p{
+            margin-top:50px;
+        }
+      .v-logo{
+        height:100px;
+      }
+      .home-screen__step-2__content__inner__body{
+        display: inline-block;
+      }
+      .unorder-li{
+        display: inline-block;
+      }
+      .unorder-li i{
+        display:inline-block;
+      }
+      .unorder-li .li-p{
+        display:inline-block;
+      }
+      #main-loading__progress{
+        margin-bottom:280px;
+      }
+      .logo{
+        height:300px; margin-top:100px;
+      }
+      .nav-link{
+        font-size:12px;
+        color:grey;
+        margin-left:30px;
+        margin-top:90px;
+      }
+      .navbar-nav{
+        position:relative;
+        bottom:38%;
+      }
+      .nav-link:hover{
+        background-color:#023b64;
+        transition: 0.5s;
+        color:white;
+        letter-spacing:2px;
+        padding:10px 40px;
+      }
+      .active{
+        background-color: #023b64;
+        padding:10px 60px;
+        color:white;
+      }
+      nav{
+        height:190px;
+      }
+      #contact__jobs{
+        margin-top:-300px;
+      }
+      .career-form{
+        background-color:#023b64;
+      }
+      .briefcase{
+        color:white;
+        padding:30px 60px;
+      }
+      .upper-content{
+        color:white;
+        padding:30px 80px;
+      }
+      .upper-content h3{
+        font-size:25px;
+      }
+      .upper-content p{
+        font-size:15px;
+        margin-top:10px;
+      }
+
+      /* form */
+      .form-control{
+        border-radius:0px;
+        padding:7px 12px;
+      }
+      .submit-btn{
+        padding:7px 40px;
+        background-color: #023b64;
+        color:white;
+        border-radius:0px;
+        margin-top:40px;
+        margin-bottom:40px;
+      }
+      @media only screen and (max-width: 600px){
+        #main-loading__progress{
+          margin-bottom:10px;
+        }
+        .logo{
+          height:200px;
+        }
+        .v-logo{
+          height:70px;
+        }
+        .nav-link{
+          color:white;
+          margin-top:30px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div id="top-bar">
+    </div>  
+      <a class=" " href="/" id="logo">
+        <img src="../static/Images/full_logo.png" style="height:70px;">
+    
+    </a>  
+          <nav class="" id="nav">
+    
+      <input id="nav-is-open" type="checkbox" value="" aria-hidden="true">
+    
+      <label id="nav-toggle" class="" for="nav-is-open">
+        <span id="nav-toggle__list">
+          <span class="nav-toggle__list__line"></span>
+          <span class="nav-toggle__list__line"></span>
+          <span class="nav-toggle__list__line"></span>
+        </span>
+        <span id="nav-toggle__cross">
+          <span class="nav-toggle__cross__line"></span>
+          <span class="nav-toggle__cross__line"></span>
+        </span>
+      </label>
+    
+      <div id="nav__content">
+        <div id="nav__content__inner">
+          <div id="nav__content__bg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900"><path fill="none" stroke="#E02D2D" stroke-width="64" stroke-miterlimit="10" d="M-41 715l398-398L-15-55"/><path fill="none" stroke="#C40E0E" stroke-width="64" stroke-miterlimit="10" d="M541.5 122.8L701.7-37.5"/><path fill="none" stroke="#D14B4B" stroke-width="64" stroke-miterlimit="10" d="M1007 353L813.8 159.9 513 461.9l506.9 515.9"/><path fill="none" stroke="#CE0D0D" stroke-width="64" stroke-miterlimit="10" d="M634.8 376.7l259.4 259.4"/><path fill="none" stroke="#ED1818" stroke-width="64" stroke-miterlimit="10" d="M784.6 345.1L958 516.5 1499.1-37"/></svg> 
+             </div>
+    
+    
+    
+             <nav class="navbar navbar-expand-lg">
+             
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link " href="{{url_for('home')}}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('about')}}">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('services')}}">Services</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{{url_for('projects')}}" style="font-size:12px;">Ongoing Projects</a>
+                      <a class="dropdown-item" href="{{url_for('complete')}}" style="font-size:12px;">Completed Projects</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="{{url_for('career')}}"> Career</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="{{url_for('contact')}}"> Contact Us</a>
+                  </li>
+                </ul>
+              
+            </nav>
+          
+        </div>
+      </div>
+    
+      <!-- Project Manager
+
+We are looking for an experienced Project Manager to plan and supervise a wide range of construction projects from start to finish.
+
+
+The selected candidate will organize and oversee construction procedures and ensure they are completed in a timely and efficient manner.
+The candidate must be well-versed in various construction methods, current technologies and procedures and should be able to coordinate a team of professionals, external agencies of different disciplines to achieve the best results.
+The candidate must have an analytical mind and great organizational skills.
+The goal will be to ensure all projects are delivered on time, with given quality benchmarks in cost effective manner.
+
+
+
+Responsibilities -
+
+Plan all construction operations and schedule intermediate phases to ensure deadlines will be met
+Determine resources requirement (manpower, equipment and materials) from start to finish with attention to budgetary allocations.
+Collaborate with engineers, architects etc. to determine the specifications of the project
+Negotiate contracts with external vendors to reach profitable agreements
+Obtain permits and licenses from appropriate authorities
+Acquire equipment and material and monitor stocks to timely handle inadequacies
+Hire contractors and other staff and allocate responsibilities
+Supervise the work of laborers, mechanics etc. and give them guidance when needed
+Evaluate progress and prepare detailed reports
+Ensure adherence to all health and safety standards and report issue -->
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1 col-sm-12 col-lg-1">
+
+        </div>
+        <div class="col-md-10 col-sm-12 col-lg-10">
+          <div class="row career-form">
+            <div class="col-md-1 col-sm-12 col-lg-1 briefcase">
+              <i class="fa fa-4x fa-briefcase" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-4 col-sm-12 col-lg-9 upper-content">
+              <h3>
+                Job Application
+              </h3>
+              <p>
+                Please complete the form below to apply for positon with us.
+              </p>
+            </div>
+            <div class="col-md-7 col-sm-12 col-lg-7">
+
+            </div>
+          </div>
+         
+          <!-- actual career form -->
+          <form action="{{url_for('career')}}" method="POST" enctype="multipart/form-data">
+          <div class="row mt-5">
+            
+            <div class="col-md-3 col-sm-12 col-lg-3">
+              <label for="inputName4" style="font-size:18px;margin-top:40px;">
+                <strong>
+                  Full Name<span style="color:red;">*</span>
+                </strong>
+              </label>
+            </div>
+            <div class="col-md-9 col-sm-12 col-lg-9">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputFirstName" style="margin-bottom:10px;"><strong>First Name<span style="color:red;">*</span></strong></label>
+                  <input type="text" class="form-control" name="firstname" id="inputFirstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputLastName"  style="margin-bottom:10px;"><strong>Last Name<span style="color:red;">*</span></strong></label>
+                  <input type="text" class="form-control" name="lastname" id="inputLastName" placeholder="Last Name" required>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-3 col-sm-12 col-lg-3">
+              <label for="inputEmail4" style="font-size:18px;margin-top:18px;">
+                <strong>
+                  Email Address<span style="color:red;">*</span>
+                </strong>
+              </label>
+            </div>
+            <div class="col-md-9 col-sm-12 col-lg-9">
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Eg. example@gmail.com" name="email" required>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-3 col-sm-12 col-lg-3">
+              <label for="inputNumber4" style="font-size:18px;margin-top:18px;">
+                <strong>
+                  Contact Number<span style="color:red;">*</span>
+                </strong>
+              </label>
+            </div>
+            <div class="col-md-9 col-sm-12 col-lg-9">
+              <input type="number" class="form-control" name="contact" id="inputNumber4" placeholder="Contact Number" required>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-3 col-sm-12 col-lg-3">
+              <label for="inputName4" style="font-size:18px;margin-top:40px;">
+                <strong>
+                  Work<span style="color:red;">*</span>
+                </strong>
+              </label>
+            </div>
+            <div class="col-md-9 col-sm-12 col-lg-9">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputPosition" style="margin-bottom:10px;"><strong>Position<span style="color:red;">*</span></strong></label>
+                  <select class="form-control" style="padding:10px 12px;" id="inputPosition" name="position" required>
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="Civil Engineer">Civil Engineer</option>
+                    <option value="Mechanical Engineer">Mechanical Engineer</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="Store Person">Store Person</option>
+                    <option value="Data Entry Operator">Data Entry Operator</option>
+                    <option value="Civil Supervisor">Civil Supervisor</option>
+                    <option value="Mechanical Supervisor">Mechanical Supervisor</option>
+                    <option value="Mechanic">Mechanic</option>
+                    <option value="Operators">Operators</option>
+                    <option value="Driver">Driver</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputExperience"  style="margin-bottom:10px;"><strong>Work Experience<span style="color:red;">*</span></strong></label>
+                  <input type="text" class="form-control" name="experience" id="inputExperience" placeholder="No. of years ">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-3 col-sm-12 col-lg-3">
+              <label for="inputDate4" style="font-size:18px;margin-top:18px;">
+                <strong>
+                  Starting Date<span style="color:red;">*</span>
+                </strong>
+              </label>
+            </div>
+            <div class="col-md-9 col-sm-12 col-lg-9">
+              <input type="date" class="form-control" name="date" id="inputDate4" placeholder="Starting Date" required>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-3 col-sm-12 col-lg-3">
+              <label for="inputFile4" style="font-size:18px;margin-top:18px;">
+                <strong>
+                  Upload Resume<span style="color:red;">*</span>
+                </strong>
+              </label>
+            </div>
+            <div class="col-md-9 col-sm-12 col-lg-9">
+              <input type="file" class="form-control" name="file1" id="inputFile4" placeholder="Upload Resume" required>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-3 col-sm-12 col-lg-3">
+              
+            </div>
+            <div class="col-md-9 col-sm-12 col-lg-9">
+              <button type="submit" class="btn btn-lg submit-btn">
+                <i class="fa fa-paper-plane-o" aria-hidden="true" style="margin-right:20px;"></i> Submit
+              </button>
+            </div>
+          </div>
+        
+
+        </div>
+      </form>
+        <div class="col-md-1 col-sm-12 col-lg-1">
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="../static/js/bootomjq.js"></script>
+            <script>window.jQuery || document.write('<script src="https://www.maman-corp.com/assets/js/lib/jquery-3.1.1.min.js"><\/script>')</script>
+
+        <script src="../static/js/bootomjs.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
